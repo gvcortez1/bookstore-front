@@ -23,13 +23,17 @@ export class CategoriaCreateComponent implements OnInit {
 
     create(): void {
         this.categoriaService.create(this.categoria).subscribe((resposta) => {
-            this.router.navigate(['categorias'])
+            this.router.navigate(['categorias']);
             this.categoriaService.mensagem('Categoria Criada Com Sucesso!');
         }, err => {
             for (let i = 0; i < err.error.errors.length; i++ ) {
                 this.categoriaService.mensagem(err.error.errors[i].message)
             }
         })
+    }
+
+    cancel(): void {
+        this.router.navigate(['categorias'])
     }
 
 }
