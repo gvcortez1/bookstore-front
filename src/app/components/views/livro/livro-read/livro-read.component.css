@@ -1,0 +1,18 @@
+form {
+    width: 90%;
+    margin: auto
+}
+
+.home {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.home2 {
+    margin: 1rem auto;
+    text-align: justify;
+}
+
+button {
+    width: 100%;
+}
